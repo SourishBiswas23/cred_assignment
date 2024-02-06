@@ -5,14 +5,16 @@ import '../../app_theme.dart';
 class NextButton extends StatelessWidget {
   const NextButton({
     super.key,
+    required this.buttonLabel,
+    required this.callBack,
   });
-
+final Function() callBack;
+  final String buttonLabel;
+  
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 0,
-      left: 0,
-      right: 0,
+    return GestureDetector(
+      onTap: () => callBack(),
       child: Container(
         height: 70,
         decoration: const BoxDecoration(
@@ -23,9 +25,9 @@ class NextButton extends StatelessWidget {
           ),
         ),
         alignment: Alignment.center,
-        child: const Text(
-          'Button Text',
-          style: TextStyle(
+        child: Text(
+          buttonLabel,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),
