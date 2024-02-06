@@ -1,4 +1,6 @@
 import 'package:cred_assignment/views/home_page/first_view/first_view_collapsed.dart';
+import 'package:cred_assignment/views/home_page/first_view/first_view_expanded.dart';
+import 'package:cred_assignment/views/home_page/second_view/second_view_collapsed.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_theme.dart';
@@ -25,7 +27,14 @@ class _HomePageState extends State<HomePage> {
             left: 0,
             right: 0,
             bottom: 0,
-            child: FirstViewCollapsed(),
+            child: SecondViewCollapsed(),
+          ),
+          Positioned(
+            top: 75,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: FirstViewExpanded(),
           ),
           NextButton(),
         ],
