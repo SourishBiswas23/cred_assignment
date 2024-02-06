@@ -1,5 +1,6 @@
 import 'package:cred_assignment/views/home_page/first_view/first_view_collapsed.dart';
-import 'package:cred_assignment/views/home_page/second_view/second_view_expanded.dart';
+import 'package:cred_assignment/views/home_page/second_view/second_view_collapsed.dart';
+import 'package:cred_assignment/views/home_page/third_view/third_view_expanded.dart';
 import 'package:flutter/material.dart';
 
 import '../../app_theme.dart';
@@ -22,18 +23,25 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           Positioned(
-            top: 0,
+            top: 75 * 0,
             left: 0,
             right: 0,
             bottom: 0,
             child: FirstViewCollapsed(),
           ),
           Positioned(
-            top: 75,
+            top: 75 * 1,
             left: 0,
             right: 0,
             bottom: 0,
-            child: SecondViewExpanded(),
+            child: SecondViewCollapsed(),
+          ),
+          Positioned(
+            top: 75 * 2,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: ThirdViewExpanded(),
           ),
           NextButton(),
         ],
